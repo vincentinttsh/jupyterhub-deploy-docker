@@ -9,3 +9,4 @@ RUN python3 -m pip install --no-cache tensorflow-gpu==2.2.0
 RUN python3 -m pip install --no-cache opencv-python==4.2.0.34 nltk==3.5 statsmodels==0.11.1
 RUN python3 -m pip install --no-cache pydotplus==2.0.2 beautifulsoup4==4.9.1
 COPY README.md /home/jovyan/work/README.md
+CMD [ "cp", "-r", "/tf/notebooks", '//home/jovyan/work/tf/notebooks' ]

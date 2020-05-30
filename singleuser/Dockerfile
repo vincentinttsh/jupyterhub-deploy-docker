@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 USER 1000
 WORKDIR /home/jovyan
 ARG PYTHON_VERSION=default
-RUN /bin/sh -c mkdir /home/$NB_USER/work &&     fix-permissions /home/$NB_USER
+RUN mkdir /home/$NB_USER/work && fix-permissions /home/$NB_USER
 RUN python3 -m pip install --no-cache jupyterhub==$JUPYTERHUB_VERSION
 RUN python3 -m pip install --no-cache numpy==1.18.4
 RUN python3 -m pip install --no-cache pandas==1.0.4 `matplotlib==3.2.1`

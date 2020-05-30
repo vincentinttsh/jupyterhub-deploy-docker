@@ -1,4 +1,5 @@
-FROM jupyter/tensorflow-notebook
+ARG DOCKER_NOTEBOOK_IMAGE
+FROM $DOCKER_NOTEBOOK_IMAGE
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends \
 gnupg2 curl ca-certificates && \
